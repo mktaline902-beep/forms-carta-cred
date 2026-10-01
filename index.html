@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consórcio de Imóvel — Consor Cred Rural</title>
+  <meta name="description" content="Confirme seu interesse em consórcio de imóvel e receba atendimento de um especialista.">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f4f6f9;
+      color: #1c1e21;
+      display: flex;
+      justify-content: center;
+      padding: 24px 16px 64px;
+    }
+    .form-card {
+      width: 100%;
+      max-width: 520px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,.08);
+      padding: 28px 24px;
+    }
+    .brand {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .brand h1 { font-size: 22px; margin-bottom: 6px; }
+    .brand p { font-size: 14px; color: #65676b; }
+    fieldset {
+      border: none;
+      margin-bottom: 28px;
+    }
+    legend {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      line-height: 1.35;
+    }
+    .option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid #dadde1;
+      border-radius: 8px;
+      padding: 13px 14px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+    .option:hover { background: #f0f2f5; }
+    .option input { accent-color: #1877f2; width: 18px; height: 18px; }
+    .field { margin-bottom: 14px; }
+    .field label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: #444;
+      margin-bottom: 5px;
+    }
+    .field input {
+      width: 100%;
+      border: 1px solid #dadde1;
+      border-radius: 8px;
+      padding: 12px 14px;
+      font-size: 15px;
+    }
+    .field input:focus { outline: 2px solid #1877f2; border-color: transparent; }
+    .privacy {
+      font-size: 12px;
+      color: #65676b;
+      margin: 6px 0 20px;
+      line-height: 1.5;
+    }
+    button[type="submit"] {
+      width: 100%;
+      background: #1877f2;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    button[type="submit"]:hover { background: #1465d9; }
+    #success { display: none; text-align: center; padding: 40px 0; }
+    #success h2 { margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+  <main class="form-card">
+    <div class="brand">
+      <h1>Consórcio de Imóvel</h1>
+      <p>Consor Cred Rural — Preencha o formulário para receber atendimento de um especialista.</p>
+    </div>
+
+    <form id="lead-form" action="#" method="post">
+      <fieldset>
+        <legend>Confirma seu interesse em consórcio de Imóvel?</legend>
+        <label class="option">
+          <input type="radio" name="interesse_consorcio" value="Sim, tenho interesse" required>
+          Sim, tenho interesse
+        </label>
+        <label class="option">
+          <input type="radio" name="interesse_consorcio" value="Não tenho interesse" required>
+          Não tenho interesse
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Valor da carta de crédito desejado?</legend>
+        <label class="option">
+          <input type="radio" name="valor_carta_credito" value="De R$ 600 mil a R$ 1 Milhão" required>
+          De R$ 600 mil a R$ 1 Milhão
+        </label>
+        <label class="option">
+          <input type="radio" name="valor_carta_credito" value="De R$ 1,5 Milhões a R$ 2 Milhões" required>
+          De R$ 1,5 Milhões a R$ 2 Milhões
+        </label>
+        <label class="option">
+          <input type="radio" name="valor_carta_credito" value="De R$ 3 Milhões a R$ 4 Milhões" required>
+          De R$ 3 Milhões a R$ 4 Milhões
+        </label>
+        <label class="option">
+          <input type="radio" name="valor_carta_credito" value="De R$ 5 Milhões a R$ 7 Milhões" required>
+          De R$ 5 Milhões a R$ 7 Milhões
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Qual seria a parcela ideal?</legend>
+        <label class="option">
+          <input type="radio" name="parcela_ideal" value="De R$ 4.067,00 a R$ 5.423,00" required>
+          De R$ 4.067,00 a R$ 5.423,00
+        </label>
+        <label class="option">
+          <input type="radio" name="parcela_ideal" value="De R$ 6.778,00 a R$ 8.134,00" required>
+          De R$ 6.778,00 a R$ 8.134,00
+        </label>
+        <label class="option">
+          <input type="radio" name="parcela_ideal" value="De R$ 10.525,00 a R$ 16.270,00" required>
+          De R$ 10.525,00 a R$ 16.270,00
+        </label>
+        <label class="option">
+          <input type="radio" name="parcela_ideal" value="Acima de R$ 33.980,00" required>
+          Acima de R$ 33.980,00
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Contact info</legend>
+        <p style="font-size:13px;color:#65676b;margin-bottom:14px;">Preencha suas informações para receber atendimento de um especialista.</p>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Seu melhor e-mail" required>
+        </div>
+        <div class="field">
+          <label for="full_name">Name</label>
+          <input type="text" id="full_name" name="full_name" placeholder="Seu nome completo" required>
+        </div>
+        <div class="field">
+          <label for="work_phone_number">Work phone number</label>
+          <input type="tel" id="work_phone_number" name="work_phone_number" placeholder="(DDD) 9 9999-9999" required>
+        </div>
+      </fieldset>
+
+      <p class="privacy">By continuing, you agree to send your info to Consor Cred Rural and to our Privacy Policy.</p>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="success">
+      <h2>Obrigado!</h2>
+      <p>Recebemos suas informações. Um especialista entrará em contato em breve.</p>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('lead-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      this.style.display = 'none';
+      document.getElementById('success').style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
