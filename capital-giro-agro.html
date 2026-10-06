@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capital de Giro para o Agro — Nexo Consórcios</title>
+  <meta name="description" content="Conheça cartas contempladas Porto para capital de giro no agro. Sujeitas à disponibilidade.">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f4f6f9;
+      color: #1c1e21;
+      display: flex;
+      justify-content: center;
+      padding: 24px 16px 64px;
+    }
+    .form-card {
+      width: 100%;
+      max-width: 520px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,.08);
+      padding: 28px 24px;
+    }
+    .brand {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .brand h1 { font-size: 22px; margin-bottom: 6px; }
+    .brand p { font-size: 14px; color: #65676b; line-height: 1.5; }
+    .brand .disclaimer { margin-top: 8px; font-size: 12px; }
+    fieldset {
+      border: none;
+      margin-bottom: 28px;
+    }
+    legend {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      line-height: 1.35;
+    }
+    .option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid #dadde1;
+      border-radius: 8px;
+      padding: 13px 14px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      font-size: 15px;
+      line-height: 1.4;
+    }
+    .option:hover { background: #f0f2f5; }
+    .option input { accent-color: #1877f2; width: 18px; height: 18px; flex: 0 0 auto; }
+    .field { margin-bottom: 14px; }
+    .field label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: #444;
+      margin-bottom: 5px;
+    }
+    .field input {
+      width: 100%;
+      border: 1px solid #dadde1;
+      border-radius: 8px;
+      padding: 12px 14px;
+      font-size: 15px;
+    }
+    .field input:focus { outline: 2px solid #1877f2; border-color: transparent; }
+    .privacy {
+      font-size: 12px;
+      color: #65676b;
+      margin: 6px 0 20px;
+      line-height: 1.5;
+    }
+    button[type="submit"] {
+      width: 100%;
+      background: #1877f2;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    button[type="submit"]:hover { background: #1465d9; }
+    #success { display: none; text-align: center; padding: 40px 0; }
+    #success h2 { margin-bottom: 8px; }
+    @media (max-width: 480px) {
+      .form-card { padding: 24px 18px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="form-card">
+    <div class="brand">
+      <h1>Capital de giro para o agro</h1>
+      <p>Carta contemplada Porto, sem juros, para capital de giro. Safras não esperam — conte com a gente para conhecer as opções disponíveis para o seu caixa.</p>
+      <p class="disclaimer">Cartas sujeitas à disponibilidade e exclusivas para capital de giro.</p>
+    </div>
+
+    <form id="lead-form" action="#" method="post">
+      <fieldset>
+        <legend>Você tem interesse em uma carta contemplada para capital de giro no agro?</legend>
+        <label class="option">
+          <input type="radio" name="interesse_capital_giro_agro" value="Sim, tenho interesse" required>
+          Sim, tenho interesse
+        </label>
+        <label class="option">
+          <input type="radio" name="interesse_capital_giro_agro" value="Não tenho interesse" required>
+          Não tenho interesse
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Qual valor de crédito atende melhor à sua necessidade?</legend>
+        <label class="option">
+          <input type="radio" name="valor_credito_entrada" value="R$ 1,2 milhão — entrada a partir de R$ 312 mil" required>
+          R$ 1,2 milhão — entrada a partir de R$ 312 mil
+        </label>
+        <label class="option">
+          <input type="radio" name="valor_credito_entrada" value="R$ 2 milhões — entrada a partir de R$ 508 mil" required>
+          R$ 2 milhões — entrada a partir de R$ 508 mil
+        </label>
+        <label class="option">
+          <input type="radio" name="valor_credito_entrada" value="R$ 3,3 milhões — entrada a partir de R$ 845 mil" required>
+          R$ 3,3 milhões — entrada a partir de R$ 845 mil
+        </label>
+        <label class="option">
+          <input type="radio" name="valor_credito_entrada" value="R$ 10 milhões — entrada a partir de R$ 2,6 milhões" required>
+          R$ 10 milhões — entrada a partir de R$ 2,6 milhões
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Seus dados para receber atendimento</legend>
+        <p style="font-size:13px;color:#65676b;margin-bottom:14px;">Preencha suas informações para conversar com um especialista sobre a disponibilidade das cartas.</p>
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="Seu melhor e-mail" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="full_name">Nome completo</label>
+          <input type="text" id="full_name" name="full_name" placeholder="Seu nome completo" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="work_phone_number">Telefone com DDD</label>
+          <input type="tel" id="work_phone_number" name="work_phone_number" placeholder="(DDD) 9 9999-9999" autocomplete="tel" required>
+        </div>
+      </fieldset>
+
+      <p class="privacy">Ao continuar, você concorda em enviar suas informações para a Nexo Consórcios e com a nossa <a href="privacy-policy.html" target="_blank" rel="noopener" style="color:#1877f2;">Política de Privacidade</a>.</p>
+
+      <button type="submit">Fale conosco</button>
+    </form>
+
+    <div id="success" role="status" aria-live="polite">
+      <h2>Obrigado!</h2>
+      <p>Recebemos suas informações. Um especialista da Nexo Consórcios entrará em contato em breve.</p>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('lead-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      this.style.display = 'none';
+      document.getElementById('success').style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
