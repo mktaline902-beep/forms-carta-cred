@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#183c2d">
+  <meta name="description" content="Cartas contempladas Porto para capital de giro no agro. Consulte opções de crédito e entrada com a Bellmont Consultoria. Sujeito à disponibilidade.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bellmont Consultoria | Capital de Giro Agro">
+  <meta property="og:description" content="Capital de giro para o agro. Conheça opções de cartas contempladas Porto, sujeitas à disponibilidade.">
+  <title>Bellmont Consultoria | Capital de Giro Agro</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --forest: #183c2d;
+      --forest-deep: #102b21;
+      --leaf: #55784e;
+      --cream: #f5f2e9;
+      --paper: #fffdf7;
+      --ink: #1c2a22;
+      --muted: #657166;
+      --line: #dce2d7;
+      --gold: #d5a957;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    .topline {
+      height: 7px;
+      background: linear-gradient(90deg, var(--gold) 0 12%, var(--forest) 12% 100%);
+    }
+    .wrap { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 82px;
+      border-bottom: 1px solid rgba(24,60,45,.14);
+    }
+    .wordmark {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .mark {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      border-radius: 50% 50% 50% 12px;
+      background: var(--forest);
+      color: #f8efd9;
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 700;
+    }
+    .wordmark strong {
+      display: block;
+      color: var(--forest);
+      font-size: 16px;
+      letter-spacing: .11em;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+    .wordmark span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+    }
+    .header-link {
+      color: var(--forest);
+      font-size: 13px;
+      font-weight: 650;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 5px;
+    }
+    .hero {
+      position: relative;
+      display: grid;
+      overflow: hidden;
+      min-height: 545px;
+      grid-template-columns: 1.08fr .92fr;
+      align-items: center;
+      gap: 40px;
+      padding-block: 72px;
+      isolation: isolate;
+    }
+    .hero::before {
+      position: absolute;
+      z-index: -1;
+      top: 42px;
+      right: -8vw;
+      width: 57%;
+      height: calc(100% - 84px);
+      border-radius: 48% 0 0 48%;
+      background:
+        radial-gradient(ellipse at 70% 28%, rgba(223,196,125,.7), transparent 26%),
+        repeating-linear-gradient(164deg, transparent 0 28px, rgba(245,242,233,.17) 29px 31px),
+        linear-gradient(152deg, #76916a 4%, #385e42 49%, #183c2d 100%);
+      content: "";
+    }
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 22px;
+      color: var(--leaf);
+      font-size: 11px;
+      font-weight: 750;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before { width: 27px; height: 1px; background: var(--gold); content: ""; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      max-width: 620px;
+      margin-bottom: 20px;
+      color: var(--forest-deep);
+      font-family: var(--serif);
+      font-size: clamp(48px, 6.7vw, 82px);
+      font-weight: 400;
+      letter-spacing: -.055em;
+      line-height: .99;
+    }
+    h1 em { color: var(--leaf); font-weight: 400; }
+    .hero-copy {
+      max-width: 510px;
+      margin-bottom: 28px;
+      color: #526155;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+    .cta {
+      display: inline-flex;
+      min-height: 54px;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      padding: 0 22px;
+      border: 1px solid var(--forest);
+      border-radius: 3px;
+      background: var(--forest);
+      color: white;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background .2s ease, transform .2s ease;
+    }
+    .cta:hover { transform: translateY(-2px); background: var(--forest-deep); }
+    .cta:focus-visible, a:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+    .cta span { font-size: 18px; font-weight: 400; }
+    .trust-note {
+      margin: 13px 0 0;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: .025em;
+    }
+    .field-art {
+      position: relative;
+      display: flex;
+      min-height: 350px;
+      align-items: end;
+      justify-content: center;
+    }
+    .field-art::before {
+      position: absolute;
+      right: 5%;
+      bottom: 1%;
+      left: 5%;
+      height: 26%;
+      border-radius: 50%;
+      background: rgba(11,37,26,.24);
+      content: "";
+      filter: blur(15px);
+    }
+    .sun {
+      position: absolute;
+      top: 4%;
+      right: 24%;
+      width: 94px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: #ead5a0;
+      box-shadow: 0 0 70px rgba(235,216,169,.42);
+    }
+    .field-label {
+      position: relative;
+      z-index: 1;
+      width: min(340px, 88%);
+      margin: 0 0 32px;
+      padding: 22px 24px;
+      border: 1px solid rgba(255,255,255,.32);
+      background: rgba(16,43,33,.75);
+      color: #fffdf7;
+      backdrop-filter: blur(8px);
+    }
+    .field-label small {
+      display: block;
+      margin-bottom: 8px;
+      color: #dfc27d;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    .field-label strong {
+      display: block;
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 1.15;
+    }
+    .field-label span { display: block; margin-top: 10px; color: #e5e8df; font-size: 12px; }
+    .offers {
+      padding: 70px 0 76px;
+      background: var(--paper);
+    }
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 30px;
+    }
+    h2 {
+      margin-bottom: 0;
+      color: var(--forest-deep);
+      font-family: var(--serif);
+      font-size: clamp(32px, 4vw, 46px);
+      font-weight: 400;
+      letter-spacing: -.035em;
+      line-height: 1.05;
+    }
+    .section-heading p { max-width: 340px; margin-bottom: 3px; color: var(--muted); font-size: 13px; line-height: 1.6; }
+    .offer-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .offer {
+      min-height: 145px;
+      padding: 23px 18px 20px;
+      border-right: 1px solid var(--line);
+    }
+    .offer:first-child { padding-left: 0; }
+    .offer:last-child { border-right: 0; }
+    .offer small {
+      display: block;
+      margin-bottom: 15px;
+      color: var(--leaf);
+      font-size: 10px;
+      font-weight: 750;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .offer strong {
+      display: block;
+      color: var(--forest-deep);
+      font-family: var(--serif);
+      font-size: clamp(22px, 2.4vw, 30px);
+      font-weight: 400;
+      letter-spacing: -.035em;
+    }
+    .offer span { display: block; margin-top: 7px; color: var(--muted); font-size: 12px; }
+    .about {
+      display: grid;
+      grid-template-columns: .7fr 1.3fr;
+      gap: 52px;
+      padding-block: 75px;
+    }
+    .about-title { color: var(--leaf); font-size: 11px; font-weight: 750; letter-spacing: .17em; text-transform: uppercase; }
+    .about h2 { max-width: 350px; font-size: clamp(33px, 4vw, 48px); }
+    .about-copy p { max-width: 630px; margin-bottom: 15px; color: #526155; font-size: 15px; line-height: 1.8; }
+    .page-profile {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px 30px;
+      margin-top: 25px;
+      padding: 20px 22px;
+      border-left: 3px solid var(--gold);
+      background: rgba(255,253,247,.78);
+    }
+    .profile-item { min-width: min(100%, 200px); }
+    .profile-item small { display: block; margin-bottom: 5px; color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    .profile-item strong { color: var(--forest); font-size: 14px; line-height: 1.5; }
+    .last-cta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      padding: 38px 42px;
+      background: var(--forest);
+      color: white;
+    }
+    .last-cta h2 { max-width: 520px; color: white; font-size: clamp(28px, 4vw, 42px); }
+    .last-cta p { margin: 9px 0 0; color: #d9e1d6; font-size: 13px; }
+    .last-cta .cta { flex: 0 0 auto; border-color: #e7cf99; background: #e7cf99; color: var(--forest-deep); }
+    .last-cta .cta:hover { background: #f0deb4; }
+    footer { padding: 28px 0 36px; color: var(--muted); font-size: 11px; line-height: 1.7; }
+    footer p { max-width: 850px; margin-bottom: 6px; }
+    @media (max-width: 760px) {
+      .wrap { width: min(100% - 36px, 560px); }
+      header { min-height: 70px; }
+      .header-link { font-size: 11px; }
+      .hero { min-height: auto; grid-template-columns: 1fr; gap: 5px; padding-block: 62px 20px; }
+      .hero::before { top: auto; right: -20vw; bottom: 2px; width: 92%; height: 300px; }
+      h1 { font-size: clamp(48px, 13vw, 72px); }
+      .field-art { min-height: 270px; }
+      .sun { right: 19%; width: 74px; }
+      .section-heading { display: block; }
+      .section-heading p { margin-top: 14px; }
+      .offer-grid { grid-template-columns: repeat(2, 1fr); }
+      .offer { min-height: 125px; padding: 18px 14px; border-bottom: 1px solid var(--line); }
+      .offer:first-child { padding-left: 14px; }
+      .offer:nth-child(2) { border-right: 0; }
+      .offer:nth-child(3), .offer:nth-child(4) { border-bottom: 0; }
+      .about { grid-template-columns: 1fr; gap: 20px; padding-block: 55px; }
+      .last-cta { align-items: flex-start; flex-direction: column; padding: 30px 24px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topline" aria-hidden="true"></div>
+  <div class="wrap">
+    <header>
+      <a class="wordmark" href="#inicio" aria-label="Bellmont Consultoria, início">
+        <span class="mark" aria-hidden="true">B</span>
+        <span><strong>Bellmont</strong><span>Consultoria</span></span>
+      </a>
+      <a class="header-link" href="capital-giro-agro.html">Conheça as opções <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="inicio">
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <p class="eyebrow">Fôlego para quem faz o agro acontecer</p>
+          <h1 id="hero-title">Safras não <em>esperam.</em></h1>
+          <p class="hero-copy">Conheça opções de cartas contempladas Porto para capital de giro no agronegócio. Crédito para apoiar o seu caixa, com condições para consultar com um especialista.</p>
+          <a class="cta" href="capital-giro-agro.html">Ver opções e falar com a gente <span aria-hidden="true">→</span></a>
+          <p class="trust-note">Sem juros. Cartas sujeitas à disponibilidade.</p>
+        </div>
+        <div class="field-art" aria-label="Paisagem estilizada de campo ao entardecer" role="img">
+          <div class="sun" aria-hidden="true"></div>
+          <div class="field-label">
+            <small>Bellmont Consultoria</small>
+            <strong>Capital de giro para o agro</strong>
+            <span>Opções de cartas contempladas Porto</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <section class="offers" aria-labelledby="offers-title">
+    <div class="wrap">
+      <div class="section-heading">
+        <h2 id="offers-title">Crédito para diferentes<br>tamanhos de operação.</h2>
+        <p>Consulte as opções de crédito e entrada. A disponibilidade pode variar; confirme as condições no atendimento.</p>
+      </div>
+      <div class="offer-grid">
+        <article class="offer">
+          <small>Opção 01</small>
+          <strong>R$ 1,2 milhão</strong>
+          <span>Entrada a partir de R$ 312 mil</span>
+        </article>
+        <article class="offer">
+          <small>Opção 02</small>
+          <strong>R$ 2 milhões</strong>
+          <span>Entrada a partir de R$ 508 mil</span>
+        </article>
+        <article class="offer">
+          <small>Opção 03</small>
+          <strong>R$ 3,3 milhões</strong>
+          <span>Entrada a partir de R$ 845 mil</span>
+        </article>
+        <article class="offer">
+          <small>Opção 04</small>
+          <strong>R$ 10 milhões</strong>
+          <span>Entrada a partir de R$ 2,6 milhões</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap about" aria-labelledby="about-title">
+    <div>
+      <p class="about-title">Sobre a página</p>
+      <h2 id="about-title">Uma conversa clara, do campo ao caixa.</h2>
+    </div>
+    <div class="about-copy">
+      <p>A Bellmont Consultoria compartilha informações sobre cartas contempladas Porto voltadas exclusivamente para capital de giro no agronegócio. Nosso objetivo é apresentar as opções disponíveis e conectar você a um especialista para entender os próximos passos.</p>
+      <p>Quer saber qual alternativa pode atender à sua operação? Envie seus dados e a equipe entra em contato para verificar disponibilidade e condições.</p>
+      <div class="page-profile" aria-label="Sugestões de conteúdo para a Página do Facebook">
+        <div class="profile-item">
+          <small>Nome sugerido no Facebook</small>
+          <strong>Bellmont Consultoria | Capital de Giro Agro</strong>
+        </div>
+        <div class="profile-item">
+          <small>Identificador sugerido</small>
+          <strong>@bellmontconsultoria <span>(verifique se está disponível)</span></strong>
+        </div>
+        <div class="profile-item">
+          <small>Descrição sugerida</small>
+          <strong>Cartas contempladas Porto para capital de giro no agronegócio. Consulte opções de crédito e entrada com a Bellmont Consultoria. Sujeito à disponibilidade.</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" aria-label="Fale com um especialista">
+    <div class="last-cta">
+      <div>
+        <h2>Vamos conversar sobre o seu caixa?</h2>
+        <p>Consulte a disponibilidade das cartas com a nossa equipe.</p>
+      </div>
+      <a class="cta" href="capital-giro-agro.html">Fale conosco <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <footer class="wrap">
+    <p>Cartas contempladas Porto sujeitas à disponibilidade. Oferta exclusiva para capital de giro. “Sem juros” não significa ausência de taxas, encargos ou demais condições contratuais; consulte os detalhes antes de contratar.</p>
+    <p>Bellmont Consultoria é uma página de atendimento independente. A menção a Porto identifica as cartas apresentadas e não implica, por si só, endosso ou vínculo institucional além das condições comerciais aplicáveis.</p>
+    <p>Contato: <a href="mailto:vendas@bellmontconsultoria.com.br">vendas@bellmontconsultoria.com.br</a>.</p>
+  </footer>
+</body>
+</html>
