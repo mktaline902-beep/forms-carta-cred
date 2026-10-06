@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/capital-giro",
+      "destination": "/pagina-facebook-agro.html"
+    }
+  ]
+}
